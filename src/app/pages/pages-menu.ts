@@ -4,7 +4,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'الصفحة الرئيسية',
     icon: 'shopping-cart-outline',
-    link: '/pages/homepage',
+    link: '/pages/homepage/start',
     home: true,
   },
   
