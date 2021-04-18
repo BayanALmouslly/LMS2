@@ -13,7 +13,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'توصيفات المقرر',
+    title: 'توصيف المقرر الدراسي',
     icon: 'layout-outline',
     link: '/pages/courses'
     
@@ -32,7 +32,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'المكتبة',
     icon: 'edit-2-outline',
-    link: '/pages/coursePolicy'
+    link: '/pages/library'
   
   },
   {
