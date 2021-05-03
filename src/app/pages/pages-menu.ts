@@ -38,7 +38,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'التبليغات',
     icon: 'keypad-outline',
-    link: '/pages/advertising',
+    link: '/pages/homepage/start',
     
   },
  
@@ -47,23 +47,28 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'التقييمات',
     icon: 'map-outline',
-    link: '/pages/CourseEvaluation',
+    link: '/pages/homepage/start',
 
   },
   
   {
     title: 'الدعم والتوجيه',
     icon: 'text-outline',
-    link: '/pages/CourseMessage',
+    link: '/pages/homepage/start',
 
     
   },
   {
     title: 'الإختبارات والتكليفات',
     icon: 'grid-outline',
-    link: '/pages/tools',
+    link: '/pages/homepage/start',
 
   },
  
-  
+  {
+    title: ' الأدوات',
+    icon: 'grid-outline',
+    link: '/pages/tools',
+
+  },
 ];

@@ -42,6 +42,6 @@ export class CourseDescriptionsComponent implements OnInit {
     this.thirdForm.markAsDirty();
   }
   nextStep(){
-    this.router.navigate(['/pages/coursePolicy'])
+    this.router.navigate(['/pages/educationalunit'])
   }
 }
