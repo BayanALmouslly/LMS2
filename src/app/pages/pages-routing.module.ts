@@ -23,11 +23,11 @@ const routes: Routes = [{
       loadChildren: () => import('./course-descriptions/course-descriptions.module')
         .then(m => m.CourseDescriptionsModule),
     },
-    {
-      path: 'coursePolicy',
-      loadChildren: () => import('./course-policy/course-policy.module')
-        .then(m => m.CoursePolicyModule),
-    },
+    // {
+    //   path: 'coursePolicy',
+    //   loadChildren: () => import('./course-policy/course-policy.module')
+    //     .then(m => m.CoursePolicyModule),
+    // },
     {
       path: 'advertising',
       loadChildren: () => import('./advertising/advertising.module')
