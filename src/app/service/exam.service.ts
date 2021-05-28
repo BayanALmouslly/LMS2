@@ -5,9 +5,9 @@ import { environment } from '../../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class AdvertisingService {
+export class ExamService {
 
-  api=environment.baseUrl+"api/Ads/"
+  api=environment.baseUrl+"api/Exam/"
   constructor(private http: HttpClient) { }
   Get() {
     return this.http.get<any>(this.api);
@@ -20,5 +20,4 @@ export class AdvertisingService {
   }
   Delete(id){
     return this.http.delete(this.api+id);
-  }
-}
+  }}

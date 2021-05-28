@@ -13,20 +13,36 @@ export const admin_MENU_ITEMS: NbMenuItem[] = [
     link: '/admin/advertisement',
   },
   {
-    title: 'الوحدات التعليمية ',
+    title: 'الإختبارات  ',
     icon: 'browser-outline',
   
     children: [
       {
-        title: 'اضافة وحدة تعليمية',
-        link: '/admin/educationalunits/add',
+        title: 'اضافة  اختبار',
+        link: '/admin/exams/add',
       },
       {
-        title: 'عرض الوحدات التعليمية',
-        link: '/admin/educationalunits',
+        title: 'عرض  الإختبارات',
+        link: '/admin/exams',
       },
     ]
   },
+
+  // {
+  //   title: 'الوحدات التعليمية ',
+  //   icon: 'browser-outline',
+  
+  //   children: [
+  //     {
+  //       title: 'اضافة وحدة تعليمية',
+  //       link: '/admin/educationalunits/add',
+  //     },
+  //     {
+  //       title: 'عرض الوحدات التعليمية',
+  //       link: '/admin/educationalunits',
+  //     },
+  //   ]
+  // },
 
 
 
