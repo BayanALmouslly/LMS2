@@ -22,7 +22,7 @@ export const routes: Routes = [
       .then(m => m.AdminpagesModule),
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./login/login.module')
       .then(m => m.LoginModule),
   },
