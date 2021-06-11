@@ -47,17 +47,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'التقييمات',
     icon: 'map-outline',
-    link: '/pages/homepage/start',
+    link: '/pages/CourseEvaluation',
 
   },
   
-  {
-    title: 'الدعم والتوجيه',
-    icon: 'text-outline',
-    link: '/pages/homepage/start',
-
-    
-  },
+ 
 
   {
     title: ' الإختبارات والتكليفات ',
@@ -70,9 +64,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/homeworks',
   },
   {
-    title: ' الأدوات',
+    title: 'الدعم والتوجيه',
     icon: 'grid-outline',
     link: '/pages/tools',
 
+    
   },
+  // {
+  //   title: ' الأدوات',
+  //   icon: 'grid-outline',
+  //   link: '/pages/tools',
+
+  // },
 ];
