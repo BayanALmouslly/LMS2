@@ -1,0 +1,89 @@
+<div class="card" *ngIf="noExamToDay||endTimeExam">
+    <div class="card-body">
+        <div>
+            <h1 *ngIf="noExamToDay">لايوجد اختبار لهذا اليوم</h1>
+            <h1 *ngIf="endTimeExam">انتهت مدة الإختبار</h1>
+
+            <button class="btn btn-outline-primary" (click)="GetCurrentExamForStudent()">
+                تحديث
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<div class="card"*ngIf="findExamToDay" >
+    <div class="card-body">
+        <div style="text-align: center;">
+            <h4> {{exam.title}}</h4>
+
+            <h5>
+               
+
+                وقت الاختبار {{exam.date| date:"HH:mm"}}
+                <!-- <div class="timer">
+                    <h4> Count down timer </h4>
+                    <span id="days"> {{daysToDday}} </span>Day(s)
+                    <span id="hours"> {{hoursToDday}} </span>Hrs 
+                    <span id="minutes"> {{minutesToDday}} </span>Min
+                    <span id="seconds"> {{secondsToDday}} </span>S
+                </div> -->
+            </h5>
+            <h5>
+                مدة الإختبار : {{timeExam}} دقائق
+            </h5>
+        </div>
+        <div>
+            
+            <ul class="list-group" *ngIf="currentQuestion!=undefined" >
+                <li class="list-group-item">
+                    السؤال :{{currentQuestion.question}}
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="currentQuestion.C1" value="{{currentQuestion.choise1}}"
+                            type="radio" name="flexRadioDefault" id="ci">
+
+                        {{currentQuestion.choise1}}
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="currentQuestion.C1" value="{{currentQuestion.choise2}}"
+                            type="radio" name="flexRadioDefault" id="ci">
+
+                        {{currentQuestion.choise2}}
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="currentQuestion.C1" value="{{currentQuestion.choise3}}"
+                            type="radio" name="flexRadioDefault" id="ci">
+                        {{currentQuestion.choise3}}
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" [(ngModel)]="currentQuestion.C1" value="{{currentQuestion.choise4}}"
+                            type="radio" name="flexRadioDefault" id="ci">
+                        {{currentQuestion.choise4}}
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    وقت السؤال : {{currentQuestion.time}}
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-outline-primary" (click)="addAnswer()"  type="submit"> حفظ
+                        الإجابة</button>
+
+                </li>
+            </ul>
+
+        </div>
+        <button class="btn btn-outline-primary" (click)="GetCurrentExamForStudent()">
+            تحديث
+        </button>
+        <button class="btn btn-outline-primary" (click)="addAnswers()" type="submit"> حفظ وارسال جميع الإجابات</button>
+
+    </div>
+</div>

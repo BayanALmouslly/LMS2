@@ -36,9 +36,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       name: 'Corporate',
     },
   ];
-//test edit
+
   currentTheme = 'default';
   userLogin =JSON.parse (localStorage.getItem('login'))
+  name=this.userLogin.name
   userMenu = [{ title: 'تسجيل الخروج ', link: "/" }];
   constructor(private sidebarService: NbSidebarService,
     private menuService: NbMenuService,

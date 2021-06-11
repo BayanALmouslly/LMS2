@@ -58,13 +58,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
 
     
   },
-  {
-    title: 'الإختبارات والتكليفات',
-    icon: 'grid-outline',
-    link: '/pages/homepage/start',
 
+  {
+    title: ' الإختبارات والتكليفات ',
+    icon: 'browser-outline',
+    link: '/pages/exam',
   },
- 
+  {
+    title: ' الواجبات ',
+    icon: 'pie-chart-outline',
+    link: '/pages/homeworks',
+  },
   {
     title: ' الأدوات',
     icon: 'grid-outline',

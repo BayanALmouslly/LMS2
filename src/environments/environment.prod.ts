@@ -5,6 +5,5 @@
  */
 export const environment = {
   production: true,
-  baseUrl:"http://tariqhajeer5-001-site1.ctempurl.com/"
-
+  baseUrl:"http://tariqhajeer6-001-site1.htempurl.com/"
 };

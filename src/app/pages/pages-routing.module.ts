@@ -70,6 +70,16 @@ const routes: Routes = [{
         .then(m => m.LibraryModule),
     },
     {
+      path: 'exam',
+      loadChildren: () => import('./student-exam/student-exam.module')
+        .then(m => m.StudentExamModule)
+    },
+    {
+      path: 'homeworks',
+      loadChildren: () => import('./homeworks/homeworks.module')
+        .then(m => m.HomeworksModule)
+    },
+    {
       path: '',
       redirectTo: 'homepage',
       pathMatch: 'full',

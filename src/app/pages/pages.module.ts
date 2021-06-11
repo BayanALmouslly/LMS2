@@ -14,6 +14,12 @@ import { CourseMessageModule } from './course-message/course-message.module';
 import { HelpModule } from './help/help.module';
 import { MarksModule } from './marks/marks.module';
 import { ToolsModule } from './tools/tools.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from '../login/auth.interceptor';
+import { StudentExamComponent } from './student-exam/student-exam.component';
+import { StudentExamModule } from './student-exam/student-exam.module';
+import { FormsModule as ngFormsModule } from '@angular/forms';
+import { HomeworksModule } from './homeworks/homeworks.module';
 
 @NgModule({
   imports: [
@@ -30,11 +36,20 @@ import { ToolsModule } from './tools/tools.module';
     HelpModule,
     MarksModule,
     ToolsModule,
+    StudentExamModule,
+    HomeworksModule,
+    ngFormsModule
     
   ],
   declarations: [
     PagesComponent,
+    StudentExamComponent,
   ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },],
 })
 export class PagesModule {
 }

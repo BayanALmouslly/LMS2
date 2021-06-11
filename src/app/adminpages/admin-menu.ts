@@ -25,9 +25,17 @@ export const admin_MENU_ITEMS: NbMenuItem[] = [
         title: 'عرض  الإختبارات',
         link: '/admin/exams',
       },
+      {
+        title: 'عرض  اجوبة الطلاب',
+        link: '/admin/exams/showanswer',
+      },
     ]
   },
-
+  {
+    title: 'الواجبات',
+    icon: 'keypad-outline',
+    link: '/admin/adminhomework',
+  },
   // {
   //   title: 'الوحدات التعليمية ',
   //   icon: 'browser-outline',

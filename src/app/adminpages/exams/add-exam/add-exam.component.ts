@@ -17,32 +17,42 @@ export class AddExamComponent implements OnInit {
   ngOnInit(): void {
     this.exam.Quetions = []
   }
-  CorrectChoise(index) {
-    switch (index) {
-      case 1:
-        this.quetion.Correct = this.quetion.Choise1
-        break
-      case 2:
-        this.quetion.Correct = this.quetion.Choise2
-        break
-      case 3:
-        this.quetion.Correct = this.quetion.Choise3
-        break
-      case 4:
-        this.quetion.Correct = this.quetion.Choise4
-        break
-    }
-
-  }
+  
   addQuetion() {
+    console.log(this.quetion)
+    if (this.quetion.C1 == "1") {
+      this.quetion.Correct = this.quetion.Choise1
+    } else if (this.quetion.C1 == "2")
+      this.quetion.Correct = this.quetion.Choise2
+    else if (this.quetion.C1 == "3")
+      this.quetion.Correct = this.quetion.Choise3
+    else if (this.quetion.C1 == "4")
+      this.quetion.Correct = this.quetion.Choise4
+    if (!this.quetion.Choise1 || !this.quetion.Choise2
+      || !this.quetion.Choise3 || !this.quetion.Choise4
+      || !this.quetion.Question || !this.quetion.Correct
+      || !this.quetion.Time) {
+      this.toastrService.show(
+        status || 'يجب ملئ جميع القيم',
+        `خطأ`,
+        { status });
+      return
+    }
     this.exam.Quetions.push(this.quetion)
-    this.quetion=new quetion()
+    this.quetion = new quetion()
   }
   deleteQuthion(quetion) {
     this.exam.Quetions = this.exam.Quetions.filter(q => q != quetion)
   }
   addExam(position) {
-    console.log(this.exam)
+    if(!this.exam.Date||!this.exam.Title||this.exam.Quetions.length==0)
+    {
+      this.toastrService.show(
+        status || 'يجب ملئ جميع القيم',
+        `خطأ`,
+        { status });
+      return
+    }
     this.examservice.Add(this.exam).subscribe(res => {
       this.toastrService.show(
         status || 'تمت الإضافة بنجاح',
