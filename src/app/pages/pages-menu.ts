@@ -64,16 +64,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/homeworks',
   },
   {
+    title: ' الإعلانات',
+    icon: 'grid-outline',
+    link: '/pages/advertising',
+
+  },
+  {
     title: 'الدعم والتوجيه',
     icon: 'grid-outline',
     link: '/pages/tools',
 
     
   },
-  // {
-  //   title: ' الأدوات',
-  //   icon: 'grid-outline',
-  //   link: '/pages/tools',
-
-  // },
+ 
 ];

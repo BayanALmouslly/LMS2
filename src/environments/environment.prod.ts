@@ -5,5 +5,6 @@
  */
 export const environment = {
   production: true,
-  baseUrl:"http://tariqhajeer6-001-site1.htempurl.com/"
+  baseUrl:"https://localhost:44333/"
+  //baseUrl: "http://tariqhajeer6-001-site1.htempurl.com/"
 };
