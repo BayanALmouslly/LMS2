@@ -35,12 +35,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/library'
   
   },
-  {
-    title: 'التبليغات',
-    icon: 'keypad-outline',
-    link: '/pages/homepage/start',
+  // {
+  //   title: 'التبليغات',
+  //   icon: 'keypad-outline',
+  //   link: '/pages/homepage/start',
     
-  },
+  // },
  
 
  
